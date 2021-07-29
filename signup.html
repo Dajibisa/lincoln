@@ -1,0 +1,188 @@
+<html>
+
+    <head>
+    <title>login page</title>
+        
+        <style>
+        .form-box {
+    width: 400px;
+    height: 600px;
+    position: relative;
+    margin: 5% auto;
+    margin-left: 25%;
+    background: /;
+    border: 2px;
+    padding: 5px;
+    left: 120px;
+    overflow: hidden;
+
+}
+
+.button-box {
+    width: 245px;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 8px;
+    border:1px solid white;
+    
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    color: white;
+
+}
+
+#btn {
+top: 0;
+left: 0;
+position: absolute;
+width: 110px;
+height: 40px;
+background: rgb(6, 153, 55);
+border-radius: 8px;
+transition: 0.10s;
+
+}
+
+.input-group {
+    top: 180px;
+    position: absolute;
+    width: 325px;
+    transition: 0.10s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-right: 0;
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 2px solid lightgreen;
+    outline: none;
+    background: transparent;
+
+
+}
+
+.submit-btn {
+    width: 80%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background:  rgb(6, 153, 55);
+    border: 0;
+    outline: none;
+    border-radius: 8px;
+    text-decoration: none;
+    
+
+}
+
+.check-box {
+margin: 30px 10px 30px 0;
+
+}
+
+span {
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+
+#Login {
+    left: 50px;
+}
+
+#Register {
+    left: 450px;
+}
+
+            a{
+                text-decoration: none;
+                color: royalblue;
+                text-align: end;
+                font-size: 13px;
+            }
+            .dj {
+                background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("images1.jpeg");
+               background-position: center;
+              background-size: cover;
+             position: absolute;
+            height: 100%;
+           width: 100%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        </style>
+    </head>
+    
+    <body>
+        
+        <div class="dj">
+            
+        
+        <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="Login()">LOG IN</button>
+            <button type="button" class="toggle-btn" onclick="Register()">REGISTER</button>
+
+        </div>
+        
+        <form id="Login" class="input-group">
+            <input type="text" class="input-field" placeholder="Username" required>
+            <input type="email" class="input-field" placeholder="Phonenumber/Email" required>
+            <input type="password" class="input-field" placeholder="Enter password" required>
+            <input type="password" class="input-field" placeholder="Comfirm password" required>
+           <br>
+            <br>
+            <button type="submit" class="submit-btn">Log in</button>
+            <br>
+            <a href="#">forget password</a>
+
+        </form>
+        <form id="Register" class="input-group">
+            <input type="text" class="input-field" placeholder="Firstname" required>
+            <input type="text" class="input-field" placeholder="Lastname" required>
+            <input type="phonenumber" class="input-field" placeholder="Phonenumber" required>
+            <input type="email" class="input-field" placeholder="Email" required><br>
+            <input type="password" class="input-field" placeholder="Create password " required>
+            <input type="password" class="input-field" placeholder="Comfirm password" required>
+            <br>
+
+            <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+            <button type="submit" class="submit-btn">Register</button>
+
+        </form>
+
+    </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("Login");
+        var y = document.getElementById("Register");
+        var z = document.getElementById("btn");
+
+        function Register(){
+            x.style.left="-400px";
+            y.style.left="50px";
+            z.style.left="110px";
+        }
+
+        function Login(){
+            x.style.left="50px";
+            y.style.left="450px";
+            z.style.left="0px";
+        }
+
+    </script>
+</body>
+</html>
